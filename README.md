@@ -14,4 +14,5 @@ Case Study:
 2- Encrypting that data after receiving with calculating the encryption time.
 3- Sending an encrypting data with the same size as the plaintext to a remote cloud.
 
- 
+ The flow how I will work on it.
+https://raw.githubusercontent.com/ibrahimsenan/FPE-App/master/Artboard%201.png
