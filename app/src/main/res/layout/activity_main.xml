@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.goldenman.myapplication.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/encryptData"
+        android:layout_below="@+id/decryptData"
+        android:layout_marginTop="21dp"
+        android:text="Elapsed time in milliseconds: " />
+
+    <TextView
+    android:id="@+id/aws"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/textView"
+    android:layout_below="@+id/textView"
+    android:text="Time to Store in DataBase: " />
+
+    <TextView
+        android:id="@+id/readingXlsFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeReadingFromXlsFile"
+        android:layout_alignBottom="@+id/timeReadingFromXlsFile"
+        android:layout_toStartOf="@+id/timeToStorinDatabase"
+        android:text="Time read Data from Iot Device: " />
+
+    <TextView
+    android:id="@+id/encryptingTim"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/readingXlsFile"
+    android:layout_alignStart="@+id/aws"
+    android:text="Time Encrypting: " />
+
+    <TextView
+        android:id="@+id/testFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/encryptingTim"
+        android:layout_below="@+id/encryptingTim"
+        android:layout_marginTop="14dp"
+        android:text="Test Name: " />
+
+    <TextView
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/readingXlsFile"
+        android:layout_centerVertical="true"
+        android:text="Total Sum: " />
+
+    <TextView
+        android:id="@+id/timeReadingFromXlsFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeToStorinDatabase"
+        android:layout_toEndOf="@+id/readingXlsFile"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+
+    <TextView
+        android:id="@+id/timeEncrypting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/readingXlsFile"
+        android:layout_toEndOf="@+id/readingXlsFile"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+
+    <TextView
+        android:id="@+id/fileTestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/testFile"
+        android:layout_alignBottom="@+id/testFile"
+        android:layout_alignStart="@+id/totalSum"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+
+    <TextView
+        android:id="@+id/totalSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/sum"
+        android:layout_alignBottom="@+id/sum"
+        android:layout_toEndOf="@+id/encryptData"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+    <TextView
+        android:id="@+id/totalEncryptionTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/decryptData"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+
+    <TextView
+        android:id="@+id/timeToStorinDatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/totalEncryptionTime"
+        android:layout_below="@+id/totalEncryptionTime"
+        android:paddingLeft="10dp"
+        android:text="XXX" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Encrypt"
+        android:id="@+id/encryptData"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/decryptData"
+        android:layout_alignBaseline="@+id/encryptData"
+        android:layout_alignBottom="@+id/encryptData"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="55dp"
+        android:text="Decrypt" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sum"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/K1Radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="89dp"
+        android:text="1 Kb" />
+
+    <RadioButton
+        android:id="@+id/M1Radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="1MB" />
+
+        <RadioButton
+            android:id="@+id/M4radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4MB" />
+
+        <RadioButton
+            android:id="@+id/M10Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="10 MB" />
+    </RadioGroup>
+
+</RelativeLayout>
